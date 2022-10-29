@@ -1,0 +1,310 @@
+// Variables
+
+// Brand
+$charcoal: #171321 !default;
+$orange-01p: #fca326 !default;
+$charcoal-02p: #fc6d26 !default;
+$charcoal-03p: #e24329 !default;
+$purple-01p: #a989f5 !default;
+$purple-02p: #7759c2 !default;
+$gray-01: #d1d0d3 !default;
+$gray-02: #a2a1a6 !default;
+$gray-03: #74717a !default;
+$gray-04: #45424d !default;
+$gray-05: #2b2838 !default;
+
+// Color system
+
+// UI
+// orange
+$orange-50: #fdf1dd !default;
+$orange-100: #f5d9a8 !default;
+$orange-200: #e9be74 !default;
+$orange-300: #d99530 !default;
+$orange-400: #c17d10 !default;
+$orange-500: #ab6100 !default;
+$orange-600: #9e5400 !default;
+$orange-700: #8f4700 !default;
+$orange-800: #703800 !default;
+$orange-900: #5c2900 !default;
+$orange-950: #421f00 !default;
+
+// red
+$red-50: #fcf1ef !default;
+$red-100: #fdd4cd !default;
+$red-200: #fcb5aa !default;
+$red-300: #f57f6c !default;
+$red-400: #ec5941 !default;
+$red-500: #dd2b0e !default;
+$red-600: #c91c00 !default;
+$red-700: #ae1800 !default;
+$red-800: #8d1300 !default;
+$red-900: #660e00 !default;
+$red-950: #4d0a00 !default;
+
+// purple
+$purple-50: #f4f0ff !default;
+$purple-100: #e1d8f9 !default;
+$purple-200: #cbbbf2 !default;
+$purple-300: #ac93e6 !default;
+$purple-400: #9475db !default;
+$purple-500: #7b58cf !default;
+$purple-600: #694cc0 !default;
+$purple-700: #5943b6 !default;
+$purple-800: #453894 !default;
+$purple-900: #2f2a6b !default;
+$purple-950: #232150 !default;
+
+// blue
+$blue-50: #e9f3fc !default;
+$blue-100: #cbe2f9 !default;
+$blue-200: #9dc7f1 !default;
+$blue-300: #63a6e9 !default;
+$blue-400: #428fdc !default;
+$blue-500: #1f75cb !default;
+$blue-600: #1068bf !default;
+$blue-700: #0b5cad !default;
+$blue-800: #064787 !default;
+$blue-900: #033464 !default;
+$blue-950: #002850 !default;
+
+// green
+$green-50: #ecf4ee !default;
+$green-100: #c3e6cd !default;
+$green-200: #91d4a8 !default;
+$green-300: #63a6e9 !default;
+$green-400: #428fdc !default;
+$green-500: #1f75cb !default;
+$green-600: #1068bf !default;
+$green-700: #0b5cad !default;
+$green-800: #064787 !default;
+$green-900: #033464 !default;
+$green-950: #002850 !default;
+
+// Neutrals
+// Neutral
+$white: #fff;
+$black: #000;
+$gray-10: #f5f5f5 !default;
+$gray-50: #f0f0f0 !default;
+$gray-100: #dbdbdb !default;
+$gray-200: #bfbfbf !default;
+$gray-300: #999999 !default;
+$gray-400: #868686 !default;
+$gray-500: #666666 !default;
+$gray-600: #5e5e5e !default;
+$gray-700: #525252 !default;
+$gray-800: #404040 !default;
+$gray-900: #303030 !default;
+$gray-950: #1f1f1f !default;
+
+// Themes
+// indigo
+$t-indigo-50: #f1f1ff !default;
+$t-indigo-100: #dbdbf8 !default;
+$t-indigo-200: #c7c7f2 !default;
+$t-indigo-300: #a2a2e6 !default;
+$t-indigo-400: #8181d7 !default;
+$t-indigo-500: #6666c4 !default;
+$t-indigo-600: #5252b5 !default;
+$t-indigo-700: #41419f !default;
+$t-indigo-800: #303083 !default;
+$t-indigo-900: #222261 !default;
+$t-indigo-950: #14143d !default;
+
+// dark blue
+$t-blue-50: #cdd8e3 !default;
+$t-blue-100: #b9cadc !default;
+$t-blue-200: #a6bdd5 !default;
+$t-blue-300: #81a5c9 !default;
+$t-blue-400: #628eb9 !default;
+$t-blue-500: #4977a5 !default;
+$t-blue-600: #346596 !default;
+$t-blue-700: #235180 !default;
+$t-blue-800: #153c63 !default;
+$t-blue-900: #0b2640 !default;
+$t-blue-950: #0b2640 !default;
+
+// light blue
+$t-light-blue-50: #dde6ee !default;
+$t-light-blue-100: #c1d4e6 !default;
+$t-light-blue-200: #a0bedc !default;
+$t-light-blue-300: #74a3d3 !default;
+$t-light-blue-400: #4f8bc7 !default;
+$t-light-blue-500: #3476b9 !default;
+$t-light-blue-600: #2268ae !default;
+$t-light-blue-700: #145aa1 !default;
+$t-light-blue-800: #0e4d8d !default;
+$t-light-blue-900: #0c4277 !default;
+$t-light-blue-950: #0a3764 !default;
+
+// t-green
+$t-green-50: #dde9de !default;
+$t-green-100: #b1d6b5 !default;
+$t-green-200: #8cc497 !default;
+$t-green-300: #69af7d !default;
+$t-green-400: #499767 !default;
+$t-green-500: #308258 !default;
+$t-green-600: #25744c !default;
+$t-green-700: #1b653f !default;
+$t-green-800: #155635 !default;
+$t-green-900: #0e4328 !default;
+$t-green-950: #062d16 !default;
+
+// dark red
+$t-red-50: #f4e9e7 !default;
+$t-red-100: #ecd3d0 !default;
+$t-red-200: #e3bab5 !default;
+$t-red-300: #d59086 !default;
+$t-red-400: #c66e60 !default;
+$t-red-500: #ad4a3b !default;
+$t-red-600: #a13322 !default;
+$t-red-700: #8f2110 !default;
+$t-red-800: #761405 !default;
+$t-red-900: #580d02 !default;
+$t-red-950: #380700 !default;
+
+// light red
+$t-light-red-50: #faf2f1 !default;
+$t-light-red-100: #f6d9d5 !default;
+$t-light-red-200: #ebada2 !default;
+$t-light-red-300: #e07f6f !default;
+$t-light-red-400: #d36250 !default;
+$t-light-red-500: #c24b38 !default;
+$t-light-red-600: #b53a26 !default;
+$t-light-red-700: #a02e1c !default;
+$t-light-red-800: #8b2212 !default;
+$t-light-red-900: #751709 !default;
+$t-light-red-950: #5c1105 !default;
+
+//Data visualization
+// green
+$dv-green-50: #ddfab7 !default;
+$dv-green-100: #c9f097 !default;
+$dv-green-200: #b0de73 !default;
+$dv-green-300: #94c25e !default;
+$dv-green-400: #83ab4a !default;
+$dv-green-500: #608b2f !default;
+$dv-green-600: #487900 !default;
+$dv-green-700: #366800 !default;
+$dv-green-800: #275600 !default;
+$dv-green-900: #1a4500 !default;
+$dv-green-950: #0f3300 !default;
+
+// agua
+$dv-aqua-50: #b8fff2 !default;
+$dv-aqua-100: #93fae7 !default;
+$dv-aqua-200: #5eebdf !default;
+$dv-aqua-300: #25d2d2 !default;
+$dv-aqua-400: #0bb6c6 !default;
+$dv-aqua-500: #0094b6 !default;
+$dv-aqua-600: #0080a1 !default;
+$dv-aqua-700: #006887 !default;
+$dv-aqua-800: #004d67 !default;
+$dv-aqua-900: #003f57 !default;
+$dv-aqua-950: #00293d !default;
+
+// blue
+$dv-blue-50: #e9ebff !default;
+$dv-blue-100: #d4dcfa !default;
+$dv-blue-200: #b7c6ff !default;
+$dv-blue-300: #97acff !default;
+$dv-blue-400: #748eff !default;
+$dv-blue-500: #5772ff !default;
+$dv-blue-600: #445cf2 !default;
+$dv-blue-700: #3547de !default;
+$dv-blue-800: #232fcf !default;
+$dv-blue-900: #1e23a8 !default;
+$dv-blue-950: #11118a !default;
+
+// magenta
+$dv-magenta-50: #ffe3eb !default;
+$dv-magenta-100: #ffc9d9 !default;
+$dv-magenta-200: #fcacc5 !default;
+$dv-magenta-300: #ff85af !default;
+$dv-magenta-400: #f2639a !default;
+$dv-magenta-500: #d84280 !default;
+$dv-magenta-600: #c52c6b !default;
+$dv-magenta-700: #b31756 !default;
+$dv-magenta-800: #950943 !default;
+$dv-magenta-900: #7a0033 !default;
+$dv-magenta-950: #570028 !default;
+
+// orange
+$dv-orange-50: #fae8d1 !default;
+$dv-orange-100: #f7d8b5 !default;
+$dv-orange-200: #f3c291 !default;
+$dv-orange-300: #eb9a5c !default;
+$dv-orange-400: #e17223 !default;
+$dv-orange-500: #d14e00 !default;
+$dv-orange-600: #b24800 !default;
+$dv-orange-700: #944100 !default;
+$dv-orange-800: #6f3500 !default;
+$dv-orange-900: #5c2b00 !default;
+$dv-orange-950: #421e00 !default;
+
+// Transparencies
+$black-2: rgba(0, 0, 0, 0.02) !default;
+$black-4: rgba(0, 0, 0, 0.04) !default;
+$black-6: rgba(0, 0, 0, 0.06) !default;
+$black-8: rgba(0, 0, 0, 0.08) !default;
+$black-24: rgba(0, 0, 0, 0.24) !default;
+$white-24: gba(255, 255, 255, 0.25) !default;
+
+// Spacing
+$spacing-2: 2px;
+$spacing-4: 4px;
+$spacing-8: 8px;
+$spacing-12: 12px;
+$spacing-16: 16px;
+$spacing-24: 25px;
+$spacing-32: 32px;
+
+// Typography
+$font-size-base: 1em !default;
+$font-size-sm: $font-size-base * 0.875 !default;
+$font-size-lg: $font-size-base * 1.25 !default;
+
+$font-weight-normal: 400 !default;
+$font-weight-bold: 700 !default;
+
+$font-weight-base: $font-weight-normal !default;
+
+$line-height-base: 1.25 !default; // 20px
+$line-height-sm: 1em !default; // 16px
+$line-height-h1: 2.25em !default; // 36px
+$line-height-h2: 1.75em !default; // 28px
+$line-height-text: 1.5em !default; //24px
+
+$-display-heading: $font-size-base * 1.85 !default;
+$h1-font-size: $font-size-base * 2 !default;
+$h2-font-size: $font-size-base * 1.4 !default;
+$h3-font-size: $font-size-base !default;
+$h4-font-size: 0.85em !default; // 14px
+$h5-font-size: 0.85em !default; // 14px
+$h6-font-size: 0.85em !default; // 14px
+
+$font-sizes: (
+  1: $h1-font-size,
+  2: $h2-font-size,
+  3: $h3-font-size,
+  4: $h4-font-size,
+  5: $h5-font-size,
+  6: $h6-font-size,
+) !default;
+
+// Border
+$border-width: 1px !default;
+$border-style: solid !default;
+$border-color: $gray-300 !default;
+$border-radius: 0.25em !default;
+
+// button
+
+$btn-padding-y: $spacing-8;
+$btn-padding-x: $spacing-12;
+$btn-padding-y-sm: $spacing-4;
+$btn-padding-x-sm: $spacing-8;
+
+// Shadows
+$box-shadow: inset 0px 4px 4px #bfbfbf;

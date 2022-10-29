@@ -1,0 +1,16 @@
+@import "./variables";
+
+@mixin btn-border($border-width, $border-color, $border-style) {
+  border: $border-width $border-style $border-color;
+}
+@mixin btn-border--blue($border-width, $border-color, $border-style) {
+  border: $border-width $border-style $border-color;
+}
+
+@mixin padding-btn($btn-padding-y, $btn-padding-x) {
+  padding: $btn-padding-y $btn-padding-x;
+}
+
+@mixin padding-btn--small($btn-padding-y-sm, $btn-padding-x-sm) {
+  padding: $btn-padding-y $btn-padding-x;
+}
