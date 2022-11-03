@@ -13,7 +13,7 @@ $gray-03: #74717a !default;
 $gray-04: #45424d !default;
 $gray-05: #2b2838 !default;
 
-// Color system
+// Color systrem
 
 // UI
 // orange
@@ -72,14 +72,14 @@ $blue-950: #002850 !default;
 $green-50: #ecf4ee !default;
 $green-100: #c3e6cd !default;
 $green-200: #91d4a8 !default;
-$green-300: #63a6e9 !default;
-$green-400: #428fdc !default;
-$green-500: #1f75cb !default;
-$green-600: #1068bf !default;
-$green-700: #0b5cad !default;
-$green-800: #064787 !default;
-$green-900: #033464 !default;
-$green-950: #002850 !default;
+$green-300: #52b87a !default;
+$green-400: #2da160 !default;
+$green-500: #108548 !default;
+$green-600: #217645 !default;
+$green-700: #24663b !default;
+$green-800: #0d532a !default;
+$green-900: #0a4020 !default;
+$green-950: #072b15 !default;
 
 // Neutrals
 // Neutral
@@ -98,7 +98,7 @@ $gray-800: #404040 !default;
 $gray-900: #303030 !default;
 $gray-950: #1f1f1f !default;
 
-// Themes
+// Thremes
 // indigo
 $t-indigo-50: #f1f1ff !default;
 $t-indigo-100: #dbdbf8 !default;
@@ -253,16 +253,10 @@ $black-24: rgba(0, 0, 0, 0.24) !default;
 $white-24: gba(255, 255, 255, 0.25) !default;
 
 // Spacing
-$spacing-2: 2px;
-$spacing-4: 4px;
-$spacing-8: 8px;
-$spacing-12: 12px;
-$spacing-16: 16px;
-$spacing-24: 25px;
-$spacing-32: 32px;
+$spacer: 1rem;
 
 // Typography
-$font-size-base: 1em !default;
+$font-size-base: 1rem !default;
 $font-size-sm: $font-size-base * 0.875 !default;
 $font-size-lg: $font-size-base * 1.25 !default;
 
@@ -272,18 +266,18 @@ $font-weight-bold: 700 !default;
 $font-weight-base: $font-weight-normal !default;
 
 $line-height-base: 1.25 !default; // 20px
-$line-height-sm: 1em !default; // 16px
-$line-height-h1: 2.25em !default; // 36px
-$line-height-h2: 1.75em !default; // 28px
-$line-height-text: 1.5em !default; //24px
+$line-height-sm: 1rem !default; // 16px
+$line-height-h1: 2.25rem !default; // 36px
+$line-height-h2: 1.75rem !default; // 28px
+$line-height-text: 1.5rem !default; //24px
 
 $-display-heading: $font-size-base * 1.85 !default;
 $h1-font-size: $font-size-base * 2 !default;
 $h2-font-size: $font-size-base * 1.4 !default;
 $h3-font-size: $font-size-base !default;
-$h4-font-size: 0.85em !default; // 14px
-$h5-font-size: 0.85em !default; // 14px
-$h6-font-size: 0.85em !default; // 14px
+$h4-font-size: 0.85rem !default; // 14px
+$h5-font-size: 0.85rem !default; // 14px
+$h6-font-size: 0.85rem !default; // 14px
 
 $font-sizes: (
   1: $h1-font-size,
@@ -298,14 +292,14 @@ $font-sizes: (
 $border-width: 1px !default;
 $border-style: solid !default;
 $border-color: $gray-300 !default;
-$border-radius: 0.25em !default;
+$border-radius: 0.25rem !default;
 
 // button
 
-$btn-padding-y: $spacing-8;
-$btn-padding-x: $spacing-12;
-$btn-padding-y-sm: $spacing-4;
-$btn-padding-x-sm: $spacing-8;
+// $btn-padding-y: $spacing-8;
+// $btn-padding-x: $spacing-12;
+// $btn-padding-y-sm: $spacing-4;
+// $btn-padding-x-sm: $spacing-8;
 
 // Shadows
 $box-shadow: inset 0px 4px 4px #bfbfbf;

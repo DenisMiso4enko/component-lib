@@ -1,0 +1,24 @@
+$component: "validation";
+
+$validation-variants: (
+  "good": (
+    "color": $green-500,
+  ),
+  "some": (
+    "color": $orange-600,
+  ),
+  "error": (
+    "color": $red-500,
+  ),
+);
+
+.#{$component} {
+  font-family: "Inter", sans-serif;
+  font-size: $h4-font-size;
+
+  @each $name, $styles in $validation-variants {
+    &-#{$name} {
+      color: map-get($styles, "color");
+    }
+  }
+}

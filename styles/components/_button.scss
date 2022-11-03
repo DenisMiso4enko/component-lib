@@ -1,0 +1,104 @@
+$component: "btn";
+
+$btn-padding-y-sm: ($spacer * 0.36);
+$btn-padding-x-sm: ($spacer * 0.75);
+
+// $btn-padding-y-lg: ($spacer * 0.8);
+// $btn-padding-x-lg: ($spacer * 1.5);
+
+$btn-padding-y: ($spacer * 0.672);
+$btn-padding-x: $spacer;
+
+$btn-sizes: (
+  "lg": (
+    "padding": $btn-padding-y $btn-padding-x,
+  ),
+  "sm": (
+    "padding": $btn-padding-y-sm $btn-padding-x-sm,
+  ),
+);
+
+$btn-variants: (
+  "default": (
+    "color": $gray-900,
+    "bg-color": $white,
+    "bg-color-hover": $gray-50,
+    "box-shadow": inset 0 0 0 1px $gray-200,
+    "box-shadow-hover": inset 0 0 0 2px $gray-400,
+  ),
+  "confim": (
+    "color": $white,
+    "bg-color": $blue-500,
+    "bg-color-hover": $blue-600,
+    "box-shadow": inset 0 0 0 1px $blue-400,
+    "box-shadow-hover": inset 0 0 0 2px $blue-800,
+  ),
+  "danger": (
+    "color": $white,
+    "bg-color": $red-500,
+    "bg-color-hover": $red-600,
+    "box-shadow": inset 0 0 0 1px $red-500,
+    "box-shadow-hover": inset 0 0 0 2px $red-800,
+  ),
+  "icon": (
+    "color": $gray-900,
+    "bg-color": $white,
+    "bg-color-hover": $gray-50,
+    "box-shadow": inset 0 0 0 1px $gray-200,
+    "box-shadow-hover": inset 0 0 0 2px $gray-400,
+  ),
+);
+.#{$component} {
+  outline: 0;
+  border-radius: ($spacer * 0.5);
+  background-color: transparent;
+  border: none;
+
+  display: inline-flex;
+  align-items: center;
+  padding: $btn-padding-y $btn-padding-x;
+
+  font-size: $font-size-base;
+  cursor: pointer;
+
+  border-radius: $border-radius;
+  transition: box-shadow 0.2s;
+
+  @each $name, $styles in $btn-variants {
+    &-#{$name} {
+      color: map-get($styles, "color");
+      background-color: map-get($styles, "bg-color");
+      box-shadow: map-get($styles, "box-shadow");
+      outline: map-get($styles, "outline");
+      outline-offset: map-get($styles, "outline-offset");
+      &:hover {
+        // box-shadow: inset 0 0 0 2px #868686, 0 2px 2px 0 rgb(0 0 0 / 8%);
+        box-shadow: map-get($styles, "box-shadow-hover");
+        background-color: map-get($styles, "bg-color-hover");
+      }
+      &:focus {
+        box-shadow: inset 0 0 0 1px $blue-700, 0 0 0 1px $white,
+          0 0 0 3px $blue-400;
+        outline: none;
+      }
+    }
+  }
+
+  @each $name, $styles in $btn-sizes {
+    &-#{$name} {
+      padding: map-get($styles, "padding");
+    }
+  }
+}
+
+.btn-icon {
+  fill: $gray-500;
+  transition: fill 0.3s;
+  svg {
+    width: 16px;
+    height: 16px;
+  }
+  &:hover {
+    fill: $gray-400;
+  }
+}

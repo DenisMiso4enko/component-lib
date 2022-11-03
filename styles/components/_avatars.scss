@@ -1,0 +1,84 @@
+$component: "avatar";
+
+$avatar-border-radius-xm: ($spacer * 0.5);
+$avatar-border-radius-sm: ($spacer * 0.75);
+$avatar-border-radius-md: $spacer;
+$avatar-border-radius-lg: ($spacer * 1.5);
+$avatar-border-radius-xl: ($spacer * 2);
+$avatar-border-radius-xxl: ($spacer * 3);
+
+$avatar-variants: (
+  "xm": (
+    "width": $spacer,
+    "height": $spacer,
+    "border-radius": $avatar-border-radius-xm,
+    "background-color": $gray-400,
+  ),
+  "sm": (
+    "width": (
+      $spacer * 1.5,
+    ),
+    "height": (
+      $spacer * 1.5,
+    ),
+    "border-radius": $avatar-border-radius-sm,
+    "background-color": $blue-400,
+  ),
+  "md": (
+    "width": (
+      $spacer * 2,
+    ),
+    "height": (
+      $spacer * 2,
+    ),
+    "border-radius": $avatar-border-radius-md,
+    "background-color": $green-400,
+  ),
+  "lg": (
+    "width": (
+      $spacer * 3,
+    ),
+    "height": (
+      $spacer * 3,
+    ),
+    "border-radius": $avatar-border-radius-lg,
+    "background-color": $purple-400,
+  ),
+  "xl": (
+    "width": (
+      $spacer * 4,
+    ),
+    "height": (
+      $spacer * 4,
+    ),
+    "border-radius": $avatar-border-radius-xl,
+    "background-color": $orange-400,
+  ),
+  "xxl": (
+    "width": (
+      $spacer * 6,
+    ),
+    "height": (
+      $spacer * 6,
+    ),
+    "border-radius": $avatar-border-radius-xxl,
+    "background-color": $red-400,
+  ),
+);
+
+.#{$component} {
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-sizing: border-box;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  @each $name, $styles in $avatar-variants {
+    &-#{$name} {
+      width: map-get($styles, "width");
+      height: map-get($styles, "height");
+      border-radius: map-get($styles, "border-radius");
+      background-color: map-get($styles, "background-color");
+    }
+  }
+}

@@ -1,0 +1,140 @@
+$component: "badge";
+
+$badge-padding-y-sm: 0;
+$badge-padding-x-sm: ($spacer * 0.5);
+
+$badge-padding-y-md: ($spacer * 0.25);
+$badge-padding-x-md: ($spacer * 0.5);
+
+$badge-padding-y-xl: ($spacer * 0.5);
+$badge-padding-x-xl: ($spacer * 0.5);
+
+$badge-border-radius-sm: ($spacer * 0.5);
+$badge-border-radius-md: ($spacer * 0.75);
+$badge-border-radius-xl: ($spacer);
+
+$badge-variants: (
+  "light": (
+    "color": $gray-500,
+    "color-active": $gray-800,
+    "background-color": $gray-50,
+    "background-color-active": $gray-100,
+    "svg-color": $gray-400,
+    "box-shadow-hover": inset 0 0 0 1px $gray-200,
+  ),
+  "gray": (
+    "color": $gray-700,
+    "color-active": $gray-900,
+    "background-color": $gray-100,
+    "background-color-active": $gray-200,
+    "svg-color": $gray-600,
+    "box-shadow-hover": inset 0 0 0 1px $gray-200,
+  ),
+  "blue": (
+    "color": $blue-700,
+    "color-active": $blue-800,
+    "background-color": $blue-100,
+    "background-color-active": $blue-200,
+    "svg-color": $blue-600,
+    "box-shadow-hover": inset 0 0 0 1px $blue-200,
+  ),
+  "green": (
+    "color": $green-700,
+    "color-active": $green-800,
+    "background-color": $green-100,
+    "background-color-active": $green-200,
+    "svg-color": $green-600,
+    "box-shadow-hover": inset 0 0 0 1px $green-200,
+  ),
+  "orange": (
+    "color": $orange-700,
+    "color-active": $orange-800,
+    "background-color": $orange-100,
+    "background-color-active": $orange-200,
+    "svg-color": $orange-600,
+    "box-shadow-hover": inset 0 0 0 1px $orange-200,
+  ),
+  "red": (
+    "color": $red-700,
+    "color-active": $red-800,
+    "background-color": $red-100,
+    "background-color-active": $red-200,
+    "svg-color": $red-600,
+    "box-shadow-hover": inset 0 0 0 1px $red-200,
+  ),
+  "purple": (
+    "color": $purple-700,
+    "color-active": $purple-800,
+    "background-color": $purple-100,
+    "background-color-active": $purple-200,
+    "svg-color": $purple-600,
+    "box-shadow-hover": inset 0 0 0 1px $purple-200,
+  ),
+);
+
+$badge-sizes: (
+  "sm": (
+    "padding": $badge-padding-y-sm $badge-padding-x-sm,
+    "border-radius": $badge-border-radius-sm,
+  ),
+  "md": (
+    "padding": $badge-padding-y-md $badge-padding-x-md,
+    "border-radius": $badge-border-radius-md,
+  ),
+  "lg": (
+    "padding": $badge-padding-y-xl $badge-padding-x-xl,
+    "border-radius": $badge-border-radius-xl,
+  ),
+);
+
+.#{$component} {
+  font-family: "Inter", sans-serif;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+
+  font-size: ($font-size-base * 0.75);
+  line-height: $font-size-base;
+
+  cursor: pointer;
+
+  box-shadow: none;
+
+  transition: box-shadow 0.3s, background-color 0.3s, color 0.3s;
+  &:focus,
+  :active {
+    box-shadow: inset 0 0 0 1px $blue-700, 0 0 0 1px $white,
+      0 0 0 4px gba(31, 117, 203, 0.25);
+    outline: none;
+  }
+
+  svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  @each $name, $styles in $badge-variants {
+    &-#{$name} {
+      color: map-get($styles, "color");
+      background-color: map-get($styles, "background-color");
+      svg {
+        fill: map-get($styles, "svg-color");
+      }
+      &:hover {
+        box-shadow: map-get($styles, "box-shadow-hover");
+      }
+      &:active {
+        color: map-get($styles, "color-active");
+        background-color: map-get($styles, "background-color-active");
+      }
+    }
+  }
+
+  @each $name, $styles in $badge-sizes {
+    &-#{$name} {
+      padding: map-get($styles, "padding");
+      border-radius: map-get($styles, "border-radius");
+    }
+  }
+}

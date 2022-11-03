@@ -1,8 +1,19 @@
-@import './styles/variables';
-@import './styles/mixins';
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
 
+@import "./styles/abstracts/variables";
+@import "./styles/abstracts/mixins";
 
+@import "./styles/components/button";
+@import "./styles//components/input";
+@import "./styles//components/validation";
+@import "./styles/layout/input-group";
 
-@import "../component-library/scss/buttons/btn-default";
-@import "../component-library/scss/buttons/btn-confim";
-@import "../component-library/scss/buttons/btn-danger";
+@import "./styles//components/badge";
+@import "./styles//components/avatars";
+.body {
+  font-family: "Inter", sans-serif;
+}
+
+.visually-hidden {
+  display: none;
+}
