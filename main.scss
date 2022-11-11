@@ -10,6 +10,17 @@
 
 @import "./styles//components/badge";
 @import "./styles//components/avatars";
+
+@import "./styles//components/allert";
+@import "./styles/layout/allert-group";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
 .body {
   font-family: "Inter", sans-serif;
 }

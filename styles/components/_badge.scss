@@ -97,8 +97,6 @@ $badge-sizes: (
   font-size: ($font-size-base * 0.75);
   line-height: $font-size-base;
 
-  cursor: pointer;
-
   box-shadow: none;
 
   transition: box-shadow 0.3s, background-color 0.3s, color 0.3s;
@@ -121,12 +119,14 @@ $badge-sizes: (
       svg {
         fill: map-get($styles, "svg-color");
       }
-      &:hover {
+      &:hover:any-link {
         box-shadow: map-get($styles, "box-shadow-hover");
+        cursor: pointer;
       }
-      &:active {
+      &:active:any-link {
         color: map-get($styles, "color-active");
         background-color: map-get($styles, "background-color-active");
+        cursor: pointer;
       }
     }
   }

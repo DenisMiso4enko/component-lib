@@ -40,46 +40,49 @@ $btn-variants: (
     "box-shadow": inset 0 0 0 1px $red-500,
     "box-shadow-hover": inset 0 0 0 2px $red-800,
   ),
-  "icon": (
-    "color": $gray-900,
-    "bg-color": $white,
-    "bg-color-hover": $gray-50,
-    "box-shadow": inset 0 0 0 1px $gray-200,
-    "box-shadow-hover": inset 0 0 0 2px $gray-400,
-  ),
 );
+
+:root {
+  --btn-color: $gray-900;
+  --btn-bg-color: $white;
+  --btn-bg-color-hover: $white;
+  --btn-bg-box-shadow: inset 0 0 0 1px $gray-200;
+  --btn-bg-box-shadow-hover: inset 0 0 0 2px $gray-400;
+}
 .#{$component} {
   outline: 0;
   border-radius: ($spacer * 0.5);
-  background-color: transparent;
+  background-color: var(--btn-bg-color);
   border: none;
 
   display: inline-flex;
   align-items: center;
   padding: $btn-padding-y $btn-padding-x;
 
+  color: var(--btn-color);
   font-size: $font-size-base;
   cursor: pointer;
 
   border-radius: $border-radius;
-  transition: box-shadow 0.2s;
+  box-shadow: var(--btn-bg-box-shadow);
+
+  &:hover {
+    background-color: var(--btn-bg-color-hover);
+    box-shadow: var(--btn-bg-box-shadow-hover);
+  }
+  &:focus {
+    box-shadow: inset 0 0 0 1px $blue-700, 0 0 0 1px $white, 0 0 0 3px $blue-400;
+    outline: none;
+  }
 
   @each $name, $styles in $btn-variants {
     &-#{$name} {
-      color: map-get($styles, "color");
-      background-color: map-get($styles, "bg-color");
-      box-shadow: map-get($styles, "box-shadow");
-      outline: map-get($styles, "outline");
-      outline-offset: map-get($styles, "outline-offset");
+      --btn-color: #{map-get($styles, "color")};
+      --btn-bg-color: #{map-get($styles, "bg-color")};
+      --btn-bg-box-shadow: #{map-get($styles, "box-shadow")};
       &:hover {
-        // box-shadow: inset 0 0 0 2px #868686, 0 2px 2px 0 rgb(0 0 0 / 8%);
-        box-shadow: map-get($styles, "box-shadow-hover");
-        background-color: map-get($styles, "bg-color-hover");
-      }
-      &:focus {
-        box-shadow: inset 0 0 0 1px $blue-700, 0 0 0 1px $white,
-          0 0 0 3px $blue-400;
-        outline: none;
+        --btn-bg-box-shadow-hover: #{map-get($styles, "box-shadow-hover")};
+        --btn-bg-color-hover: #{map-get($styles, "bg-color-hover")};
       }
     }
   }
@@ -92,13 +95,6 @@ $btn-variants: (
 }
 
 .btn-icon {
-  fill: $gray-500;
-  transition: fill 0.3s;
-  svg {
-    width: 16px;
-    height: 16px;
-  }
-  &:hover {
-    fill: $gray-400;
-  }
+  display: inline-block;
+  margin: 2px 0;
 }

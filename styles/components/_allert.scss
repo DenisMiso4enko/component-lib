@@ -1,0 +1,48 @@
+$component: "allert";
+
+$allert-padding: $spacer;
+
+$allert-variants: (
+  "red": (
+    "background-color": $red-50,
+    "svg-color": $red-600,
+  ),
+  "orange": (
+    "background-color": $orange-50,
+    "svg-color": $orange-600,
+  ),
+  "green": (
+    "background-color": $green-50,
+    "svg-color": $green-600,
+  ),
+  "blue": (
+    "background-color": $blue-50,
+    "svg-color": $blue-600,
+  ),
+  "gray": (
+    "background-color": $gray-50,
+    "svg-color": $gray-600,
+  ),
+);
+
+.#{$component} {
+    
+
+
+  max-width: 967px;
+  padding: $allert-padding;
+
+  svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  @each $name, $styles in $allert-variants {
+    &-#{$name} {
+      background-color: map-get($styles, "background-color");
+      svg {
+        fill: map-get($styles, "svg-color");
+      }
+    }
+  }
+}
